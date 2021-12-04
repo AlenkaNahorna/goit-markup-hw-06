@@ -431,13 +431,48 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
           <svg class="close-icon" width="18px" height="18px">
             <use href="./images/icons.svg#close-black"></use>
           </svg>
         </button>
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form action="#" class="modal-form">
+          <div class="modal-form-field">
+            <label for="user-name" class="modal-input-text">Имя</label>
+            <div class="modal-input-wrap">
+              <input type="text" name="user-name" id="user-name" class="modal-input" />
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label for="user-tel" class="modal-input-text">Телефон</label>
+            <div class="modal-input-wrap">
+              <input type="tel" name="user-tel" id="user-tel" class="modal-input" />
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label for="user-email" class="modal-input-text"> Почта</label>
+            <div class="modal-input-wrap">
+              <input type="email" name="user-email" id="user-email" class="modal-input" />
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label for="comment" class="modal-input-text">Комментарий</label>
+            <textarea
+              name="comment"
+              id="comment"
+              class="modal-comment"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="primary-btn">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
