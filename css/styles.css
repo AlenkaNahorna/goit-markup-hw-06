@@ -652,6 +652,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-logo-primary);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:focus,
+.modal-close:hover {
+  color: var(--second-title-color);
+}
+
+.close-icon {
+  fill: currentColor;
 }
 
 .is-hidden {
@@ -671,11 +682,20 @@ body {
   color: var(--main-title-color);
 }
 
+.modal-form-field {
+  margin-bottom: 10px;
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+
 .modal-input {
   width: 100%;
   height: 40px;
-  padding: 11px 12px;
-  margin-bottom: 10px;
+  padding: 11px 42px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -684,6 +704,14 @@ body {
   outline: none;
   background-color: transparent;
   color: var(--first-text-color);
+}
+
+.modal-input:focus {
+  border-color: var(--second-title-color);
+}
+
+.modal-input:focus + .input-icon {
+  fill: var(--second-title-color);
 }
 
 .modal-input-text {
@@ -695,10 +723,21 @@ body {
   letter-spacing: 0.01em;
 }
 
+.input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-comment {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
@@ -710,11 +749,59 @@ body {
   color: var(--first-text-color);
 }
 
+.modal-comment:focus {
+  border-color: var(--second-title-color);
+}
+
 .modal-comment::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-policy {
+  margin: 10px auto;
+}
+
+.modal-check-text {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.modal-check-text span {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  margin-right: 7px;
+
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-title-color);
+  border-radius: 2px;
+}
+
+.modal-check:checked + .modal-check-text span {
+  background-color: var(--second-title-color);
+  border: 0;
+}
+
+.contract {
+  display: inline-block;
+  margin-left: 4px;
+
+  color: var(--second-title-color);
+}
+
+.modal-btn {
+  display: block;
+  margin: 20px auto 0;
 }
 
 /* ---------------------PORTFOLIO----------------------- */

@@ -431,7 +431,7 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
           <svg class="close-icon" width="18px" height="18px">
@@ -444,6 +444,9 @@
             <label for="user-name" class="modal-input-text">Имя</label>
             <div class="modal-input-wrap">
               <input type="text" name="user-name" id="user-name" class="modal-input" />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#person-black"></use>
+              </svg>
             </div>
           </div>
 
@@ -451,6 +454,9 @@
             <label for="user-tel" class="modal-input-text">Телефон</label>
             <div class="modal-input-wrap">
               <input type="tel" name="user-tel" id="user-tel" class="modal-input" />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#phone-black"></use>
+              </svg>
             </div>
           </div>
 
@@ -458,6 +464,9 @@
             <label for="user-email" class="modal-input-text"> Почта</label>
             <div class="modal-input-wrap">
               <input type="email" name="user-email" id="user-email" class="modal-input" />
+              <svg class="input-icon" width="18" height="18">
+                <use href="./images/icons.svg#email-black"></use>
+              </svg>
             </div>
           </div>
 
@@ -471,7 +480,25 @@
             ></textarea>
           </div>
 
-          <button type="submit" class="primary-btn">Отправить</button>
+          <div class="modal-form-policy">
+            <input
+              type="checkbox"
+              name="policy"
+              id="modal-check"
+              class="modal-check visually-hidden"
+            />
+            <label for="modal-check" class="modal-check-text"
+              ><span>
+                <svg class="icon-check" width="16" height="15">
+                  <use href="./images/icons.svg#check-agree"></use>
+                </svg>
+              </span>
+              Соглашаюсь с рассылкой и принимаю
+              <a href="" class="contract">Условия договора</a>
+            </label>
+          </div>
+
+          <button type="submit" class="primary-btn modal-btn">Отправить</button>
         </form>
       </div>
     </div>
